@@ -85,36 +85,15 @@ function draw() {
     if(particle.body.position.y>750){
       if(particle.body.position.x<330){
         score = score+300;
-        particle=null;
-        if(count>= 5){
-          gameState = "end";
-        }
-      }
-    }
-  }
-  
-  if(particle != null){
-    particle.display();
-    if(particle.body.position.y>750){
-      if(particle.body.position.x<570){
+      }else if(particle.body.position.x<570){
         score = score+400;
-        particle=null;
-        if(count>= 5){
-          gameState = "end";
-        }
-      }
-    }
-  }
-  if(particle != null){
-    particle.display();
-    if(particle.body.position.y>750){
-      if(particle.body.position.x<810){
+      } else if(particle.body.position.x<810){
         score = score+500;
+      }
         particle=null;
         if(count>= 5){
           gameState = "end";
         }
-      }
     }
   }
   
